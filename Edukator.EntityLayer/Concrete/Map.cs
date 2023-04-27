@@ -10,5 +10,6 @@ namespace Edukator.EntityLayer.Concrete
     {
         public int MapID { get; set; }
         public string LocationURL { get; set; }
+        public bool Status { get; set; }
     }
 }
