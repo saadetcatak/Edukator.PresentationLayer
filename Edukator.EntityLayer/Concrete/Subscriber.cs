@@ -6,11 +6,9 @@ using System.Threading.Tasks;
 
 namespace Edukator.EntityLayer.Concrete
 {
-    public class Category
+    public class Subscriber
     {
-        public int CategoryID { get; set; }
-        public string CategoryName { get; set; }
-        public List<Course> Courses { get; set;}
-
+        public int SubscriberID { get; set; }
+        public string Mail{ get; set;}
     }
 }
