@@ -22,5 +22,6 @@ namespace Edukator.DataAccessLayer.Concrete
         public DbSet<Service> Services { get; set; }
         public DbSet<Subscriber> Subscribers { get; set; }
         public DbSet<Reference> References { get; set; }
+        public DbSet<SocialMedia> SocialMedias { get; set; }
     }
 }
