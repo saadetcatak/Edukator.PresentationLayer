@@ -30,24 +30,39 @@ namespace Edukator.PresentationLayer
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<Context>();
+
             services.AddScoped<ICategoryDal,EfCategoryDal>(); 
             services.AddScoped<ICategoryService,CategoryManager>();
+
             services.AddScoped<IContactDal, EfContactDal>();
             services.AddScoped<IContactService,ContactManager>();
+
             services.AddScoped<IContactInfoDal, EfContactInfoDal>();
             services.AddScoped<IContactInfoService,ContactInfoManager>();
+
             services.AddScoped<ICourseDal, EfCourseDal>();
             services.AddScoped<ICourseService,CourseManager>();
+
             services.AddScoped<IMapDal, EfMapDal>();
             services.AddScoped<IMapService,MapManager>();
+
             services.AddScoped<IReferenceDal, EfReferenceDal>();
             services.AddScoped<IReferenceService,ReferenceManager>();
+
             services.AddScoped<IServiceDal, EfServiceDal>();
             services.AddScoped<IServiceService, ServiceManager>();
+
             services.AddScoped<ISocialMediaDal, EfSocialMediaDal>();
             services.AddScoped<ISocialMediaService,SocialMediaManager>();
+
             services.AddScoped<ISubscriberDal, EfSubscriberDal>();
             services.AddScoped<ISubscriberService,SubscriberManager>();
+
+            services.AddScoped<IFeatureDal, EfFeatureDal>();
+            services.AddScoped<IFeatureService,FeatureManager>();
+
+            services.AddScoped<IAboutGridDal, EfAboutGridDal>();
+            services.AddScoped<IAboutGridService,GridAboutManager>();
 
             services.AddIdentity<AppUser,AppRole>().AddEntityFrameworkStores<Context>();
 
