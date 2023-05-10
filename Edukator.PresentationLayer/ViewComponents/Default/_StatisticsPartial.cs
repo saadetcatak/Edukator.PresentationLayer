@@ -11,7 +11,7 @@ namespace Edukator.PresentationLayer.ViewComponents.Default
         {
             ViewBag.v1 = context.Categories.Count();
             ViewBag.v2 = context.Courses.Count();
-            ViewBag.v3 = 684;
+            ViewBag.v3 = 680;
             return View(); 
         }
     }
