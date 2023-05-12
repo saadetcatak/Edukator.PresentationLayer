@@ -11,5 +11,6 @@ namespace Edukator.DataAccessLayer.Abstract
     {
 
         List<Course> GetCoursesWithCategory();
+        List<Course> GetCoursesWithCategories();
     }
 }

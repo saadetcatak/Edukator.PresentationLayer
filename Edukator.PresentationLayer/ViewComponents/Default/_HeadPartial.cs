@@ -1,6 +1,4 @@
-﻿
-
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 
 namespace Edukator.PresentationLayer.ViewComponents.Default
 {
