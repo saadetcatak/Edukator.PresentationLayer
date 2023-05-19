@@ -2,16 +2,14 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Edukator.DataAccessLayer.Abstract
 {
-    public interface ICourseDal: IGenericDal<Course>
+    public interface ICourseRegisterDal :IGenericDal<CourseRegister>
     {
-
-        List<Course> GetCoursesWithCategory();
-        List<Course> GetCoursesWithCategories();
-        List<Course> GetLast5Course();
+        List<CourseRegister> CourseRegisterListWithCoursesAndUsers();
     }
 }

@@ -27,7 +27,8 @@ namespace Edukator.DataAccessLayer.Concrete
         public DbSet<Feature> Features { get; set; }
         public DbSet<AboutGrid> AboutGrids { get; set; }
         public DbSet<About> Abouts { get; set; }
+        public DbSet<CourseRegister> courseRegisters { get; set; }
 
-        
+
     }
 }

@@ -71,6 +71,9 @@ namespace Edukator.PresentationLayer
             services.AddScoped<ISubscriberDal, EfSubscriberDal>();
             services.AddScoped<ISubscriberService, SubscriberManager>();
 
+            services.AddScoped<ICourseRegisterDal, EfCourseRegisterDal>();
+            services.AddScoped<ICourseRegisterService, CourseRegisterManager>();
+
             services.AddIdentity<AppUser, AppRole>().AddEntityFrameworkStores<Context>().AddErrorDescriber<CustomIdentityValidator>();
 
             services.AddControllersWithViews();
