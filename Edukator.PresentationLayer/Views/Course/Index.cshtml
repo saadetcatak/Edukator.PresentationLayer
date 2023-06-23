@@ -1,6 +1,7 @@
 ﻿@model List<Edukator.EntityLayer.Concrete.Course>
 @{
     Layout = "~/Views/AdminLayout/Index.cshtml";
+    int count = 0;
 }
 
 <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
@@ -24,13 +25,15 @@
             <tbody>
                 @foreach (var item in Model)
                 {
+                     count++;
                     <tr>
-                        <th scope="row">@item.CourseID</th>
+                            
+                        <td>@count</td>
                         <td>@item.Title</td>
                         <td>@item.Price ₺</td>
                         <td>@item.Category.CategoryName</td>
-                        <td><a href="/Course/DeleteCourse/@item.CourseID" class="btn btn-outline-danger">Sil</a></td>
-                        <td><a href="/Course/UpdateCourse/@item.CourseID" class="btn btn-outline-success">Güncelle</a></td>
+                        <td><a href="/Course/DeleteCourse/@item.CourseID" class="btn btn-outline-danger"><i class="fa fa-trash "></i>Sil</a></td>
+                        <td><a href="/Course/UpdateCourse/@item.CourseID" class="btn btn-outline-success"><i class="fa fa-pencil-alt "></i>Güncelle</a></td>
                         <td><a href="#" class="btn btn-outline-dark">Siteye Git</a></td>
 
 
@@ -41,3 +44,5 @@
         <a href="/Course/AddCourse" class="btn btn-outline-primary">Yeni kurs Girişi</a>
     </div>
 </div>
+
+

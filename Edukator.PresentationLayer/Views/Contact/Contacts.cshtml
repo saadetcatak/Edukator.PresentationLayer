@@ -1,0 +1,47 @@
+﻿﻿
+@{
+    ViewData["Title"] = "Contacts";
+    Layout = "~/Views/Shared/_DefaultLayout.cshtml";
+}
+
+<!-- breadcrumb -->
+<section class="w3l-about-breadcrumb text-center">
+    <div class="breadcrumb-bg breadcrumb-bg-about py-5">
+        <div class="container py-lg-5 py-md-4">
+            <div class="w3breadcrumb-gids">
+                <div class="w3breadcrumb-left text-left">
+                    <h2 class="title AboutPageBanner">
+                        İletişim
+                    </h2>
+                    <p class="inner-page-para mt-2">
+                        İstediğiniz Zaman İstediğiniz Yerde Öğrenmeye Başlayın
+                        Geleceğinizi Hızlandırın.
+                    </p>
+                </div>
+                <div class="w3breadcrumb-right">
+                    <ul class="breadcrumbs-custom-path">
+                        <li><a href="/Home/Index">Ana Sayfa</a></li>
+                        <li class="active"><span class="fas fa-angle-double-right mx-2"></span> İletişim</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--//breadcrumb-->
+<!-- contacts-5-grid -->
+<div class="w3l-contact-10 py-5" id="contact">
+    <div class="form-41-mian pt-lg-4 pt-md-3 pb-lg-4">
+        <div class="container">
+            <div class="heading text-center mx-auto">
+                <h5 class="title-subw3hny text-center">Bizimle İletişime Geçin</h5>
+                <h3 class="title-w3l">Merak ettiğiniz sorularınız mı var?<span class="inn-text"></span></h3>
+            </div>
+            @await Component.InvokeAsync("_ContactInfoPartial")
+            @await Html.PartialAsync("~/Views/Contact/SendMessagePartial.cshtml")
+        </div>
+    </div>
+    <!-- //contacts-5-grid -->
+</div>
+
+@await Component.InvokeAsync("_MapPartial")

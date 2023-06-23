@@ -1,5 +1,5 @@
 ﻿@{
-    Layout = null;
+    Layout = "~/Views/Shared/_DefaultLayout.cshtml";
 }
 
 
@@ -10,11 +10,7 @@ Author URL: http://w3layouts.com
 <!doctype html>
 <html lang="en">
 
-@await Component.InvokeAsync("_HeadPartial")
 
-<body>
-   
-@await Component.InvokeAsync("_NavbarPartial")
  
 @await Component.InvokeAsync("_FeaturePartial")
 
@@ -34,10 +30,6 @@ Author URL: http://w3layouts.com
  
 @await Html.PartialAsync("~/Views/Default/AddSubscriber.cshtml")
     
-@await Component.InvokeAsync("_FooterPartial")
-  
-@await Component.InvokeAsync("_ScriptPartial")
 
-</body>
 
 </html>

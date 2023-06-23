@@ -12,12 +12,14 @@ namespace Edukator.PresentationLayer.Controllers
     {
         private readonly ICourseService _courseService;
         private readonly ICategoryService _categoryService;
+        private readonly IAboutService _aboutService;
 
        
-        public CourseController(ICourseService courseService, ICategoryService categoryService)
+        public CourseController(ICourseService courseService, ICategoryService categoryService, IAboutService aboutService)
         {
             _courseService = courseService;
             _categoryService = categoryService;
+            _aboutService = aboutService;
         }
 
         public IActionResult Index()
@@ -46,6 +48,10 @@ namespace Edukator.PresentationLayer.Controllers
             _courseService.TInsert(p);
 
             return RedirectToAction("Index");
+        }
+        public IActionResult Courses()
+        {
+            return View();
         }
         public IActionResult DeleteCourse(int id)
         {

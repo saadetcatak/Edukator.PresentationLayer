@@ -4,7 +4,7 @@
     Layout = "~/Views/AdminLayout/Index.cshtml";
 }
 
-<h1>Index</h1>
+
 <div class="col-sm-12 col-xl-12">
     <div class="bg-light rounded h-100 p-4">
         <h6 class="mb-4">Sosyal Medya Hesapları</h6>
@@ -25,15 +25,15 @@
                 <tr>
                     <th scope="row">@item.SocialMediaID</th>
                     <td>@item.SocialMediaName</td>
-                    <td><a href="/SocialMedia/DeleteSocialMedia/@item.SocialMediaID" class="btn btn-outline-danger">Sil</a></td>
-                        <td><a href="/SocialMedia/UpdateSocialMedia/@item.SocialMediaID" class="btn btn-outline-success">Güncelle</a></td>
-                    <td><a href="#" class="btn btn-outline-dark">Siteye Git</a></td>
+                        <td><a href="/SocialMedia/DeleteSocialMedia/@item.SocialMediaID" class="btn btn-outline-danger"><i class="fa fa-trash "></i>Sil</a></td>
+                        <td><a href="/SocialMedia/UpdateSocialMedia/@item.SocialMediaID" class="btn btn-outline-success"><i class="fa fa-pencil-alt "></i>Güncelle</a></td>
+                        <td><a href="@item.SocialMediaUrl" target="_blank" class="btn btn-outline-info"><i class="fa fa-laptop "></i>Siteye Git</a></td>
 
 
                 </tr>
                 }
             </tbody>
         </table>
-        <a href="#" class="btn btn-outline-primary">Yeni Sosyal Medya Girişi</a>
+        <a href="/SocialMedia/AddSocialMedia" class="btn btn-outline-primary">Yeni Sosyal Medya Girişi</a>
     </div>
 </div>

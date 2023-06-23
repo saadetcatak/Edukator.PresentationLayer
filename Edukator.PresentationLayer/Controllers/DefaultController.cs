@@ -7,6 +7,7 @@ namespace Edukator.PresentationLayer.Controllers
     public class DefaultController : Controller
     {
         private readonly ISubscriberService _subscriberService;
+       
 
         public DefaultController(ISubscriberService subscriberService)
         {
